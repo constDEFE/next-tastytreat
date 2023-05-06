@@ -1,0 +1,30 @@
+@import "@/styles/variables.scss";
+
+.footer__socials {
+	ul {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		a {
+			@extend .transitionSm;
+
+      border-radius: 50%;
+      background-color: $accentColor;
+      color: white;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 1.75rem;
+      height: 1.75rem;
+
+      &:hover {
+        background-color: $fontColor;
+      }
+		}
+
+		@media (width >= $mediaSm) {
+			gap: 2rem;
+		}
+	}
+}

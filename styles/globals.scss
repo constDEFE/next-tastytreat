@@ -1,0 +1,153 @@
+@import "./variables.scss";
+
+::-webkit-scrollbar {
+	height: 6px;
+	width: 6px;
+
+	@media (width >= $mediaLg) {
+		height: 8px;
+		width: 8px;
+	}
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 8px;
+	background-color: #e72121e0;
+
+	&:hover {
+		background-color: #e76161;
+	}
+}
+
+::selection {
+	background-color: #ffb1b198;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: $bodyColor;
+	font-family: $titleFont;
+	color: $bodyFontColor;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $titleFont;
+	color: $fontColor;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+img {
+	user-select: none;
+}
+
+h1,
+h2 {
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+
+section {
+	padding: 40px 0px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+hr {
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	border-top: 1px solid;
+}
+
+input,
+textarea {
+	background: inherit;
+	border: none;
+	border-bottom: 1px solid gray;
+	padding: 0.5rem 1rem;
+	font-family: $mainFont;
+	font-size: 1rem;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+button {
+	@extend .transitionSm;
+
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: $accentColor;
+	border: none;
+	border-radius: 6px;
+	font-size: 1rem;
+	font-weight: 700;
+	font-family: $mainFont;
+	cursor: pointer;
+
+	&:hover {
+		background: $fontColor;
+	}
+}
+
+@media (width >= $mediaMd) {
+	section {
+		padding: 60px 0px;
+	}
+
+	h1,
+	h2 {
+		font-size: 2.1rem;
+	}
+}
+
+.not-found {
+	display: grid;
+	place-items: center;
+  min-height: 80vh;
+
+	> div {
+		max-width: 560px;
+		width: 100%;
+
+		h1 {
+			text-align: center;
+			font-family: $mainFont;
+		}
+
+		p {
+			padding: 0.5rem;
+			font-family: $mainFont;
+			font-weight: 600;
+		}
+
+		a,
+		span {
+			color: $accentColor;
+		}
+	}
+}

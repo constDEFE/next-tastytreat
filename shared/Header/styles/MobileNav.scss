@@ -1,0 +1,57 @@
+@import "@/styles/variables.scss";
+
+.header__mobile-nav {
+	background: $bodyColor;
+	position: absolute;
+	height: 100vh;
+	right: -50vw;
+	top: 0;
+	transition-duration: 200ms;
+	transition-timing-function: ease-out;
+
+	&.active {
+		right: 0;
+	}
+
+	.mobile-nav__menu {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		height: 100%;
+		width: 50vw;
+
+		li {
+			padding: 2rem 1rem;
+		}
+
+		a {
+			font-weight: 700;
+			font-size: 1.5rem;
+			width: 100%;
+			color: #212245;
+			transition-duration: 0.125s;
+			transition-timing-function: ease-out;
+			font-family: $mainFont;
+
+			&:hover {
+				color: $accentColor;
+			}
+		}
+	}
+}
+
+.header__mobile-button {
+	background: none;
+	border: none;
+	color: black;
+	margin-left: 1rem;
+
+	&:hover {
+		background: none;
+	}
+
+  @media (width >= $mediaMd) {
+    display: none;
+  }
+}

@@ -1,95 +1,36 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Categories from "@/modules/Home/Categories";
+import Hero from "@/modules/Home/Hero";
+import HotPizza from "@/modules/Home/HotPizza";
+import PopularFoods from "@/modules/Home/PopularFoods";
+import Services from "@/modules/Home/Services";
+import Testimonials from "@/modules/Home/Testimonials";
+import WhyUs from "@/modules/Home/WhyUs";
+import { getPopularFoods, getHotPizza, getTestimonials } from "@/utils/crud";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+export const revalidate = 3600;
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+export const metadata = {
+	title: "TastyTreat",
+	description: "HUNGRY? Just wait food at your door!",
+	icons: {
+		icon: "/favicon.ico"
+	}
+};
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+const page = async () => {
+	const [foods, hotPizza, testimonials] = await Promise.all([getPopularFoods(), getHotPizza(), getTestimonials()]);
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+	return (
+		<>
+			<Hero />
+			<Categories />
+			<Services />
+			<PopularFoods foods={foods} />
+			<WhyUs />
+			<HotPizza foods={hotPizza} />
+			<Testimonials testimonials={testimonials} />
+		</>
+	);
+};
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+export default page;

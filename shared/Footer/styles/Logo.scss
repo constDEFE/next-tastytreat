@@ -1,0 +1,23 @@
+@import "@/styles/variables.scss";
+
+.footer__logo {
+  text-align: left;
+  padding-right: 0.5rem;
+
+  img {
+    width: 100% - 80%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+  }
+
+  p {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+}

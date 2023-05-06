@@ -1,0 +1,29 @@
+@import "@/styles/variables.scss";
+
+.all-foods__pagination {
+	margin-top: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+
+	.pagination__button {
+		width: 2.25rem;
+		height: 2.25rem;
+		background-color: $fontColor;
+
+		&:hover {
+			background-color: $accentColor;
+		}
+
+    &.active {
+      background-color: $accentColor;
+    }
+	}
+
+	ul {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+}

@@ -1,0 +1,29 @@
+@import "@/styles/variables.scss";
+
+.cart__list {
+	height: 100%;
+	margin-top: 1rem;
+	margin-left: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding: 0.5rem 0;
+	width: 100%;
+	overflow-y: auto;
+
+	button {
+		background: none;
+		color: $fontColor;
+
+		&:hover {
+			background: none;
+		}
+	}
+
+	> button {
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+}

@@ -1,0 +1,59 @@
+@import "@/styles/variables.scss";
+
+.cart__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1rem;
+
+  .content__buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: $accentWhite;
+    border-radius: 6px;
+
+    span {
+      font-weight: 700;
+    }
+
+    button {
+      padding: 0.25rem 0.5rem;
+
+      &:hover {
+        background: $accentWhiteHover;
+      }
+    }
+  }
+
+  > div {
+    display: flex;
+    gap: 1rem;
+
+    img {
+      width: 56px;
+      height: 56px;
+    }
+
+    .item__title {
+      font-size: 0.9rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      font-weight: 700;
+
+      span {
+        color: $accentColor;
+        margin-left: 2rem;
+      }
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+}

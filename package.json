@@ -6,17 +6,44 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,ts,tsx,md}\""
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "semi": true,
+    "trailingComma": "none",
+    "singleQuote": false,
+    "useTabs": true,
+    "tabWidth": 2,
+    "printWidth": 120
   },
   "dependencies": {
-    "@types/node": "20.1.0",
-    "@types/react": "18.2.6",
-    "@types/react-dom": "18.2.4",
-    "eslint": "8.40.0",
-    "eslint-config-next": "13.4.1",
+    "@next-auth/firebase-adapter": "^2.0.1",
+    "@reduxjs/toolkit": "^1.9.5",
+    "clsx": "^1.2.1",
+    "firebase": "^9.21.0",
+    "firebase-admin": "^11.8.0",
     "next": "13.4.1",
+    "next-auth": "^4.22.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.0.4"
+    "react-icons": "^4.8.0",
+    "react-redux": "^8.0.5",
+    "react-slick": "^0.29.0",
+    "sharp": "^0.32.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.0",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@types/react-slick": "^0.23.10",
+    "@types/slick-carousel": "^1.6.37",
+    "eslint": "^8.40.0",
+    "eslint-config-next": "^13.4.1",
+    "prettier": "^2.8.8",
+    "sass": "^1.62.1",
+    "typescript": "^5.0.4"
   }
 }

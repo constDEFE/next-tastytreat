@@ -1,0 +1,19 @@
+@import "@/styles/variables.scss";
+
+.footer__contact {
+  h3 {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+  }
+
+  div:first-child {
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+	div:last-child p {
+		font-weight: 700;
+    padding: 0.3rem 0;
+	}
+}

@@ -1,0 +1,40 @@
+@import "@/styles/variables.scss";
+
+.reviews__form {
+  margin: 1rem auto 0 auto;
+  width: 100%;
+  background: $accentWhite;
+  padding: 1rem;
+  border-radius: 8px;
+
+  textarea {
+    width: 100%;
+    resize: vertical;
+    max-height: 400px;
+    min-height: 40px;
+    height: 40px;
+    overflow-y: hidden;
+
+    @media (width >= $mediaSm) {
+      max-height: 240px;
+    }
+
+    @media (width >= $mediaMd) {
+      max-height: 180px;
+    }
+  }
+
+  button {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  @media (width >= $mediaMd) {
+    width: 75%;
+  }
+
+  @media (width >= $mediaXl) {
+    width: 40%;
+  }
+}

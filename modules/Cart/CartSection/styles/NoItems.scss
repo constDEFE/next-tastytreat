@@ -1,0 +1,26 @@
+@import "@/styles/variables.scss";
+
+.cart-section__no-items {
+  display: grid;
+  place-items: center;
+
+  > div {
+    max-width: 280px;
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+    color: $fontColor;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
+  }
+
+  a {
+    display: block;
+    padding: 0.25rem;
+    font-size: 0.9rem;
+    color: $accentColor;
+  }
+}

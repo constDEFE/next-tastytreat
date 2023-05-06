@@ -1,0 +1,72 @@
+@import "@/styles/variables.scss";
+
+.footer {
+	padding: 3rem 0;
+	background: $accentWhite;
+
+	p {
+		font-family: $mainFont;
+		line-height: 28px;
+		font-size: 0.8rem;
+	}
+
+	.footer__container > div {
+		&:first-child {
+			display: grid;
+			grid-template-columns: 1fr;
+
+			@media (width >= $mediaSm) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@media (width >= $mediaMd) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			@media (width >= $mediaLg) {
+				grid-template-columns: repeat(4, 1fr);
+			}
+		}
+
+		&:last-child {
+			margin-top: 3rem;
+			display: grid;
+			grid-template-columns: 1fr;
+
+			div:first-child p {
+				font-size: 12px;
+				color: $accentColor;
+				font-weight: 600;
+
+				@media (width >= $mediaMd) {
+					font-size: 14px;
+				}
+			}
+
+			div:last-child {
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				gap: 1rem;
+
+				@media (width >= $mediaSm) {
+					gap: 2rem;
+				}
+			}
+
+			@media (width >= $mediaLg) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+	}
+
+	@media (min-width: $mediaMd) {
+		h5 {
+			font-size: 1rem;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	}
+}

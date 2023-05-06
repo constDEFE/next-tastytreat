@@ -1,0 +1,27 @@
+@import "@/styles/variables.scss";
+
+.tab-content__reviews {
+  .reviews__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  div {
+    h5 {
+      font-family: $mainFont;
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: $fontColor;
+    }
+  }
+
+  h4 {
+    color: $accentColor;
+    font-family: $mainFont;
+    font-size: 1.25rem;
+  }
+}

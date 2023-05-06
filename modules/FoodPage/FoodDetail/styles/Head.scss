@@ -1,0 +1,52 @@
+@import "@/styles/variables.scss";
+
+.food-detail__head {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+	align-items: center;
+
+	.head__right {
+		> div {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		p {
+			font-weight: 700;
+		}
+
+		.right__price {
+			font-family: $mainFont;
+			font-size: 1.25rem;
+			color: $accentColor;
+
+			span {
+				margin-left: 1rem;
+				font-size: 2rem;
+			}
+		}
+
+		.right__category {
+			font-family: $mainFont;
+
+			span {
+				margin-left: 1rem;
+				padding: 0.25rem 1rem;
+				background: $accentWhite;
+				border-radius: 6px;
+			}
+		}
+
+		button {
+			margin-top: 3rem;
+			padding: 0.5rem 1rem;
+			font-size: 0.9rem;
+		}
+	}
+
+	@media (width >= $mediaMd) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}

@@ -1,0 +1,41 @@
+@import "@/styles/variables.scss";
+
+.account {
+	min-height: 80vh;
+	display: grid;
+	place-items: center;
+
+	> div {
+		text-align: center;
+
+		img {
+			border-radius: 50%;
+		}
+
+		hr {
+			margin-bottom: 0.5rem;
+			max-width: 400px;
+			width: 100%;
+      margin-inline: auto;
+		}
+
+		h1 {
+			font-family: $mainFont;
+			font-size: 1.8rem;
+			max-width: 400px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+		p {
+			font-family: $mainFont;
+		}
+
+		button {
+			margin-top: 1rem;
+			padding: 0.5rem 1rem;
+			margin-inline: auto;
+		}
+	}
+}

@@ -1,0 +1,45 @@
+@import "@/styles/variables.scss";
+
+.cart-section__table {
+  width: 100%;
+  font-family: $mainFont;
+  border-collapse: collapse;
+
+  thead {
+    border-bottom: 2px solid black;
+  }
+
+  td,
+  th {
+    padding: 0.25rem;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 0.8rem;
+    border: 1px solid $lightGray;
+
+    @media (min-width: $mediaSm) {
+      font-size: 1rem;
+    }
+  }
+
+  td {
+    text-align: center;
+  }
+
+  button {
+    background: none;
+    color: black;
+    margin: 0 auto;
+  }
+
+  img {
+    width: 48px;
+    height: auto;
+
+    @media (min-width: $mediaSm) {
+      width: 64px;
+    }
+  }
+}

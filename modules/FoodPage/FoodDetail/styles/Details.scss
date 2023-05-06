@@ -1,0 +1,37 @@
+@import "@/styles/variables.scss";
+
+.food-detail__details {
+	.details__tabs {
+		padding-top: 1rem;
+		display: flex;
+		gap: 3rem;
+		border-bottom: 1px solid $accentWhite;
+
+		input {
+			display: none;
+
+			&:checked + label {
+				color: $accentColor;
+			}
+		}
+
+		label {
+			cursor: pointer;
+			font-weight: 400;
+			padding: 1rem 0;
+			border: none;
+			background: none;
+			font-size: 1rem;
+		}
+	}
+
+	.details__tab-content {
+		padding: 1rem 0;
+
+		p {
+			font-family: $mainFont;
+			color: $lightFontColor;
+			line-height: 1.75;
+		}
+	}
+}

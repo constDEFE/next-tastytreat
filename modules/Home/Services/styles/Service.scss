@@ -1,0 +1,28 @@
+@import "@/styles/variables.scss";
+
+.row__item {
+	p {
+		font-size: 0.9rem;
+		padding: 0.5rem;
+	}
+
+	h4 {
+		font-size: 1rem;
+		padding: 0.5rem;
+	}
+
+	img {
+		width: 25%;
+		height: auto;
+	}
+
+	@media (width >= $mediaMd) {
+		p {
+			font-size: 1rem;
+		}
+
+		h4 {
+			font-size: 1.25rem;
+		}
+	}
+}

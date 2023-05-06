@@ -1,0 +1,15 @@
+@import "@/styles/variables.scss";
+
+.header__account-button {
+	margin-right: 1rem;
+	background: none;
+	border: none;
+	color: black;
+	position: relative;
+	width: 28px;
+	height: 28px;
+
+	&:hover {
+		background: none;
+	}
+}

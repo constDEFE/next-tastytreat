@@ -1,0 +1,44 @@
+@import "@/styles/variables.scss";
+
+.cart-section__summary {
+	margin-top: 2rem;
+	font-family: $mainFont;
+
+	.summary__total {
+		font-size: 1rem;
+		font-weight: 700;
+		font-family: $titleFont;
+
+		span {
+			color: $accentColor;
+			font-size: 1.5rem;
+		}
+	}
+
+	.summary__buttons {
+		flex-direction: column;
+		margin-top: 1rem;
+		display: flex;
+		align-items: flex-start;
+		gap: 1rem;
+
+		a {
+      @extend .transitionSm;
+
+			font-size: 0.9rem;
+			padding: 0.5rem 1rem;
+      font-weight: 600;
+      background-color: $accentColor;
+      color: white;
+      border-radius: 6px;
+
+      &:hover {
+        background-color: $fontColor;
+      }
+		}
+
+		@media (width >= $mediaSm) {
+			flex-direction: row;
+		}
+	}
+}

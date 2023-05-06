@@ -1,0 +1,14 @@
+@import "@/styles/variables.scss";
+
+.cart__close-button {
+	margin-left: 1rem;
+	margin-top: 1rem;
+	border-radius: 50%;
+	background-color: unset;
+	color: $fontColor;
+
+	&:hover {
+		transform: scale(1.1);
+		background-color: unset;
+	}
+}

@@ -1,0 +1,47 @@
+@import "@/styles/variables.scss";
+
+.services__container {
+	text-align: center;
+
+  p {
+    color: $lightFontColor;
+    font-family: $mainFont;
+  }
+
+	.services__head {
+		span {
+			color: $accentColor;
+		}
+
+		h2 {
+			font-size: 1.25rem;
+			font-weight: 400;
+			color: $accentColor;
+		}
+
+		h3 {
+			padding: 1rem 0;
+			font-size: 1.5rem;
+		}
+	}
+
+	.services__row {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem 0;
+		padding-top: 2rem;
+	}
+
+	@media (width >= $mediaSm) {
+		.services__row {
+			padding-top: 4rem;
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	@media (width >= $mediaMd) {
+		.services__head h3 {
+			font-size: 2.1rem;
+		}
+	}
+}

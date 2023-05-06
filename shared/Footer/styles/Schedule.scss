@@ -1,0 +1,19 @@
+@import "@/styles/variables.scss";
+
+.footer__schedule {
+	h3 {
+		font-weight: 600;
+		font-size: 1.1rem;
+		padding: 0.5rem 0;
+	}
+
+	h4 {
+		font-family: $mainFont;
+	}
+
+	> div {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+}

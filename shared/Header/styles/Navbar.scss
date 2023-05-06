@@ -1,0 +1,49 @@
+@import "@/styles/variables.scss";
+
+.header__navigation {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	.navigation__menu {
+		display: none;
+		align-items: center;
+		gap: 2rem;
+
+		a {
+			font-weight: 700;
+			font-size: 0.9rem;
+			color: #212245;
+			transition-duration: 0.125s;
+			transition-timing-function: ease-out;
+			font-family: $mainFont;
+			gap: 2rem;
+
+			&:hover {
+				color: #df2020;
+			}
+		}
+	}
+}
+
+@media (width >= $mediaSm) {
+	.header__navigation .navigation__menu {
+		display: flex;
+	}
+}
+
+@media (width >= $mediaMd) {
+	.header__navigation .navigation__menu {
+		gap: 3rem;
+	}
+}
+
+@media (width >= $mediaLg) {
+	.header__navigation .navigation__menu {
+		gap: 4rem;
+
+		a {
+			font-size: 1rem;
+		}
+	}
+}

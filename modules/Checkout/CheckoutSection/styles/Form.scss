@@ -1,0 +1,29 @@
+@import "@/styles/variables.scss";
+
+.checkout__form {
+  grid-column: span 2 / span 2;
+
+  
+  fieldset {
+    padding-top: 1rem;
+    border: none;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    
+    legend {
+      font-weight: 400;
+    }
+    
+    input {
+      width: 100%;
+    }
+  
+    button {
+      padding: 0.5rem 2rem;
+    }
+  }
+
+}

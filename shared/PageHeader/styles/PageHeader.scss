@@ -1,0 +1,13 @@
+@import "@/styles/variables.scss";
+
+.page-header {
+	padding: 5rem 0;
+	background: $headerBg;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+
+	h1 {
+		color: white;
+	}
+}

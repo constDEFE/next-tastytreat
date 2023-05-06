@@ -1,0 +1,54 @@
+@import "@/styles/variables";
+
+.head__preview {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	flex-direction: column;
+
+	> img {
+		width: 65%;
+		height: auto;
+	}
+
+  .preview__column {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+  
+    hr {
+      display: none;
+      margin: 0.5rem;
+      width: 75%;
+      border-top: 1px solid lightgray;
+  
+      @media (width >= $mediaMd) {
+        display: block;
+      }
+    }
+  
+    img {
+      width: 20%;
+      height: auto;
+      cursor: pointer;
+  
+      @media (width >= $mediaMd) {
+        width: 72px;
+      }
+    }
+  
+    @media (width >= $mediaMd) {
+      gap: 0.5rem;
+      flex-direction: column;
+    }
+  }
+
+  @media (width >= $mediaMd) {
+		flex-direction: row;
+		justify-content: flex-start;
+		gap: 2rem;
+	}
+}

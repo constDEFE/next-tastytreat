@@ -1,0 +1,12 @@
+@import "@/styles/variables.scss";
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: flex-start;
+  gap: 2rem 1rem;
+
+  @media (min-width: $mediaMd) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

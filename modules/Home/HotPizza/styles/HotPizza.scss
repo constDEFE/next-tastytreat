@@ -1,0 +1,23 @@
+@import "@/styles/variables.scss";
+
+.hot-pizza {
+	text-align: center;
+
+	h2 {
+		margin-bottom: 3rem;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1rem;
+
+		@media (width >= $mediaSm) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (width >= $mediaXl) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+}

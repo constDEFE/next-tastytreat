@@ -1,0 +1,39 @@
+@import "@/styles/variables.scss";
+
+.footer__newsletter {
+  h3 {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+  }
+
+	form {
+		border: 1px solid black;
+		border-radius: 6px;
+		background: transparent;
+		display: flex;
+		align-items: center;
+		padding: 0.1rem 0.15rem;
+
+		input {
+			border: none;
+			width: 100%;
+			padding: 0.5rem;
+			font-size: 0.85rem;
+			font-family: $mainFont;
+			font-weight: 600;
+			background: transparent;
+
+			&:focus {
+				outline: none;
+			}
+
+			@media (min-width: $mediaLg) {
+				font-size: 1rem;
+			}
+		}
+
+		button {
+			padding: 0.5rem 1.5rem;
+		}
+	}
+}

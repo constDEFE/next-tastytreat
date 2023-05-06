@@ -1,0 +1,26 @@
+@import "@/styles/variables.scss";
+
+.header__cart-button {
+	background: none;
+	border: none;
+	color: black;
+	position: relative;
+
+	&:hover {
+		background: none;
+	}
+
+	span {
+		position: absolute;
+		background: $accentColor;
+		color: white;
+		padding: 0.05rem 0.3rem;
+		display: grid;
+		place-items: center;
+		font-size: 0.8rem;
+		font-weight: 700;
+		border-radius: 16px;
+		top: -6px;
+		right: -6px;
+	}
+}

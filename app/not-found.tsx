@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Link from "next/link";
 
 const NotFound: NextPage = () => {
 	return (
@@ -12,7 +11,7 @@ const NotFound: NextPage = () => {
 				<hr />
 				<p>
 					Go back to the
-					<Link href="/"> Homepage</Link>
+					<a href="/"> Homepage</a>
 				</p>
 			</div>
 		</section>

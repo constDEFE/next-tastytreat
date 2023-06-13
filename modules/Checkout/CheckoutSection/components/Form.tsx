@@ -65,7 +65,7 @@ const Form: FC = () => {
 				<input onChange={handleChange} value={state.phone} name="phone" type="tel" placeholder="Phone Number" />
 				<input onChange={handleChange} value={state.country} name="country" type="text" placeholder="Country" />
 				<input onChange={handleChange} value={state.city} name="city" type="text" placeholder="City" />
-				<input onChange={handleChange} value={state.postalCode} name="postal" type="text" placeholder="Postal Code" />
+				<input onChange={handleChange} value={state.postalCode} name="postalCode" type="text" placeholder="Postal Code" />
 				<button type="submit">Payment</button>
 			</fieldset>
 		</form>
